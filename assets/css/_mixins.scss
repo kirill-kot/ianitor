@@ -1,0 +1,224 @@
+// unitless function to convert px to em
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1em;
+}
+
+// breakpoint mixin
+@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
+  @if $mq2 == false {
+    @media ($maxmin: $mq01) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: $mq01) and (max-width: $mq2) {
+      @content;
+    }
+  }
+}
+
+// responsive font size mixin
+@mixin font-size-map($font-size-map) {
+  @each $breakpoint, $font-size in $font-size-map {
+    @if $breakpoint == null {
+      font-size: em($font-size);
+    } @else {
+      @include breakpoint($breakpoint) {
+        font-size: em($font-size);
+      }
+    }
+  }
+}
+@function is($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return $pixels;
+}
+
+@mixin icon-map($icon-map) {
+  @each $breakpoint, $icon-size in $icon-map {
+    @if $breakpoint == null {
+      height: is($icon-size);
+      width: is($icon-size);
+    } @else {
+      @include breakpoint($breakpoint) {
+        height: is($icon-size);
+        width: is($icon-size);
+      }
+    }
+  }
+}
+@function logo($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return $pixels;
+}
+@mixin logo-map($logo-map) {
+  @each $breakpoint, $logo-height in $logo-map {
+    @if $breakpoint == null {
+      height: logo($logo-height);
+    } @else {
+      @include breakpoint($breakpoint) {
+        height: logo($logo-height);
+      }
+    }
+  }
+}
+
+
+@function width($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return $pixels;
+}
+@mixin img-width($img-width) {
+  @each $breakpoint, $width in $img-width {
+    @if $breakpoint == null {
+      width: width($width);
+    } @else {
+      @include breakpoint($breakpoint) {
+        width: width($width);
+      }
+    }
+  }
+}
+
+@function height($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return $pixels;
+}
+@mixin img-height($img-width) {
+  @each $breakpoint, $height in $img-width {
+    @if $breakpoint == null {
+      height: height($height);
+    } @else {
+      @include breakpoint($breakpoint) {
+        height: height($height);
+      }
+    }
+  }
+}
+@function img-mw($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1%;
+  }
+  @return $pixels;
+}
+@mixin img-max-width($img-max-width) {
+  @each $breakpoint, $max-width in $img-max-width {
+    @if $breakpoint == null {
+      max-width: img-mw($max-width);
+    } @else {
+      @include breakpoint($breakpoint) {
+        max-width: img-mw($max-width);
+      }
+    }
+  }
+}
+
+@function gi-minheight($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return $pixels;
+}
+@mixin gi-minheight($img) {
+  @each $breakpoint, $min-height in $img {
+    @if $breakpoint == null {
+      min-height: gi-minheight($min-height);
+    } @else {
+      @include breakpoint($breakpoint) {
+        min-height: gi-minheight($min-height);
+      }
+    }
+  }
+}
+
+@function line_height($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return $pixels;
+}
+@mixin img-line-height($img-width) {
+  @each $breakpoint, $height in $img-width {
+    @if $breakpoint == null {
+      line-height: line_height($height);
+    } @else {
+      @include breakpoint($breakpoint) {
+        line-height: line_height($height);
+      }
+    }
+  }
+}
+
+//unitless in pixels mixin
+@function pixels($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @return $pixels;
+}
+//unitless in percents mixin
+@function percent($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1%;
+  }
+  @return $pixels;
+}
+//unitless in rem mixin
+@function rem($pixels) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1rem;
+  }
+  @return $pixels;
+}
+
+//unversal reusable mixin
+
+@mixin universal-px($icon-map, $prop) {
+  @if($prop) {
+    @each $breakpoint, $icon-size in $icon-map {
+      @if $breakpoint == null {
+        #{$prop}: pixels($icon-size);
+      } @else {
+        @include breakpoint($breakpoint) {
+          #{$prop}: pixels($icon-size);
+        }
+      }
+    }
+  }
+}
+@mixin universal-rem($icon-map, $prop) {
+  @each $breakpoint, $icon-size in $icon-map {
+    @if $breakpoint == null {
+      #{$prop}: rem($icon-size);
+    } @else {
+      @include breakpoint($breakpoint) {
+        #{$prop}: rem($icon-size);
+      }
+    }
+  }
+}
+@mixin universal-percent($icon-map, $prop) {
+  @each $breakpoint, $icon-size in $icon-map {
+    @if $breakpoint == null {
+      #{$prop}: percent($icon-size);
+    } @else {
+      @include breakpoint($breakpoint) {
+        #{$prop}: percent($icon-size);
+      }
+    }
+  }
+}

@@ -1,0 +1,540 @@
+//all media queries are here
+// degradative style
+@media all and (max-width: 600px) {
+  .navbar {
+    //display: none !important;
+    }
+}
+@media (max-width: 1280px) {
+  .descr {
+    font-size: 1.125rem !important;
+    text-align: center;
+  }
+  #we_are {
+    span {
+      width: 40px;
+      height: 40px;
+      svg {
+
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+  #contact {
+    span {
+      width: 40px;
+      height: 40px;
+      svg {
+
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1024px) {
+  section {
+    display: block;
+    padding: 5% 0;
+  }
+  .container {
+    max-width: none;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #contact {
+    .texts {
+      align-items: center;
+    }
+  }
+  .animation {
+    height: 280px;
+  }
+}
+@media all and (min-width: 0) and (max-width: 480px) {
+  .navbar .btn-special, .navbar .invert, .navbar .navbar-toggler {
+    padding: .5rem 1rem;
+  }
+  .navbar .navbar-toggler {
+    margin-left: 30px;
+  }
+  .side #logo_text{
+    height: 15px;
+  }
+  h1{
+    font-size: 1.5rem !important;
+  }
+  span {
+    width: 50px  !important;
+    height: 50px !important;
+    svg {
+      height: 30px !important;
+      width: 30px !important;
+    }
+  }
+  #contact .texts{
+    margin-left: 0 !important;
+  }
+  #we_are {
+    .w2text1 {
+      width: 100% !important;
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+    .w2text2 {
+      width: 100% !important;
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+    .w2text3 {
+      width: 100% !important;
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+    .w2text4 {
+      width: 100% !important;
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+    }
+  }
+  .sideQuote p {
+    font-size: 1rem !important;
+  }
+}
+@media all and (min-width: 0) and (max-width: 992px) {
+
+  footer {
+    .copy {
+      height: auto;
+      line-height: 2;
+      p {
+        margin: 0;
+        text-align: center;
+      }
+    }
+  }
+}
+@media all and (max-width: 1280px) {
+
+  #first video {
+    width: auto;
+    height: 100vh;
+  }
+  #first {
+    display: flex;
+  }
+  section .section-back {
+    opacity: 0.25;
+  }
+  .fancybox-caption-wrap .fancybox-caption {
+    font-size: 1.125rem;
+  }
+  .navbar {
+    .navbar-nav {
+      a {
+        font-size: 1.125rem;
+      }
+    }
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  section {
+    padding: 60px 0;
+    p {
+      font-size: 1.25rem;
+    }
+    a {
+      font-size: 1.25rem;
+    }
+    .content {
+      height: auto;
+    }
+    ul {
+      li {
+        font-size: 1.25rem !important;
+      }
+    }
+    .sideQuote {
+      width: auto;
+      position: relative;
+      margin-bottom: 2rem;
+      left: auto;
+      bottom: auto;
+    }
+  }
+    .descr {
+      font-size: 1.125rem;
+    }
+  label {
+    font-size: 1rem;
+  }
+  .form-control {
+    font-size: 1.125rem;
+  }
+  .fancybox-button {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    &:before {
+      width: 30px;
+    }
+    &:after {
+      width: 30px;
+    }
+
+    footer {
+      .flex {
+        a {
+          font-size: 1rem;
+        }
+      }
+    }
+}
+  .fancybox-button--close {
+    top: 1rem;
+  }
+  .fancybox-inner {
+    .fancybox-arrow {
+      height: 30px;
+      width: 30px;
+      &:after {
+        height: 30px;
+        width: 30px;
+        background-size: 20px;
+      }
+    }
+  }
+  #product {
+    .animation {
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #holo_line {
+      height: auto;
+      width: 280px;
+    }
+    .back {
+      height: auto;
+      width: 280px;
+    }
+  }
+  #we_are {
+    span {
+      width: 80px;
+      height: 80px;
+      svg {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+  #contact {
+    span {
+      width: 80px;
+      height: 80px;
+      svg {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+
+  #we_are {
+    .promo {
+      min-height: 3.5rem;
+      margin: 0;
+    }
+  }
+  .text1, .text2, .text3 {
+    .promo {
+      min-height: 90px;
+      margin: 0;
+    }
+  }
+}
+
+
+@media all and (min-width: 1281px) and (max-width: 1600px) {
+  #first video {
+    top: -2rem;
+    width: 100%;
+  }
+  section .section-back {
+    opacity: 0.6;
+  }
+  .fancybox-caption-wrap .fancybox-caption {
+  font-size: 1.775rem;
+}
+  .navbar {
+    .navbar-nav {
+      a {
+        font-size: 1.375rem;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  section {
+    padding: 80px 0;
+    .content {
+      height: 80vh;
+    }
+    .sideQuote {
+      left: 40px;
+      bottom: 40px;
+    }
+    .descr {
+      font-size: 1.375rem;
+    }
+    ul li {
+      font-size: 1.125rem;
+    }
+  }
+  .fancybox-button {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    &:before {
+      width: 80px;
+    }
+    &:after {
+      width: 80px;
+    }
+  }
+  .fancybox-button--close {
+    top: 1rem;
+  }
+  .fancybox-inner {
+    .fancybox-arrow {
+      height: 80px;
+      width: 80px;
+      &:after {
+        height: 80px;
+        width: 80px;
+        background-size: 60px;
+      }
+    }
+  }
+  label {
+    font-size: 1.125rem;
+  }
+  .form-control {
+    font-size: 1.375rem;
+  }
+  #product {
+    .animation {
+      height: 320px;
+    }
+    #holo_line {
+      height: auto;
+      width: 320px;
+    }
+    .back {
+      height: auto;
+      width: 320px;
+    }
+  }
+  #we_are {
+    span {
+      width: 100px;
+      height: 100px;
+      svg {
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+  #contact {
+    span {
+      width: 100px;
+      height: 100px;
+      svg {
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+}
+@media all and (min-width: 1601px) and (max-width: 1920px) {
+  #first video {
+    //top: -2rem;
+    width: 100%;
+  }
+  #first {
+    height: 99vh;
+    min-height: 99vh;
+  }
+  section .section-back {
+    opacity: 0.75;
+  }
+  .fancybox-caption-wrap .fancybox-caption {
+  font-size: 1.675rem;
+}
+  .navbar {
+    .navbar-nav {
+      a {
+        font-size: 1.675rem;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+  section {
+    padding: 100px 0;
+  .sideQuote {
+    bottom: 40px;
+  }
+  .descr {
+    font-size: 1.675rem;
+  }
+  ul li {
+    font-size: 1.375rem;
+  }
+}
+  .fancybox-button {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    &:before {
+      width: 80px;
+    }
+    &:after {
+      width: 80px;
+    }
+  }
+  .fancybox-button--close {
+    top: 1rem;
+  }
+  .fancybox-inner {
+    .fancybox-arrow {
+      height: 80px;
+      width: 80px;
+      &:after {
+        height: 80px;
+        width: 80px;
+        background-size: 60px;
+      }
+    }
+  }
+  label {
+    font-size: 1.375rem;
+  }
+  .form-control {
+    font-size: 1.675rem;
+  }
+  #product {
+    .animation {
+      height: 350px;
+    }
+    #holo_line {
+      height: auto;
+      width: 350px;
+    }
+    .back {
+      height: auto;
+      width: 350px;
+    }
+  }
+  #we_are {
+    span {
+      width: 100px;
+      height: 100px;
+      svg {
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+  #contact {
+    span {
+      width: 100px;
+      height: 100px;
+      svg {
+        height: 60px;
+        width: 60px;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1921px){
+  #first video {
+    width: 100%;
+  }
+  #first {
+    height: 99vh;
+    min-height: 99vh;
+  }
+  section .section-back {
+    opacity: 0.9;
+  }
+  .fancybox-caption-wrap .fancybox-caption {
+    font-size: 2rem;
+  }
+  .navbar {
+    .navbar-nav {
+      a {
+        font-size: 1.75rem;
+      }
+    }
+  }
+  section {
+    padding: 120px 0;
+    .descr {
+      font-size: 1.75rem;
+    }
+    ul li {
+      font-size: 1.5275rem;
+    }
+  }
+  #product {
+    .animation {
+      height: 386px;
+    }
+    #holo_line {
+      height: auto;
+      width: 386px;
+    }
+    .back {
+      height: auto;
+      width: 386px;
+    }
+  }
+  label {
+    font-size: 1.5275rem;
+  }
+  .form-control {
+    font-size: 1.75rem;
+  }
+
+  #we_are {
+    span {
+      width: 120px;
+      height: 120px;
+      svg {
+        height: 80px;
+        width: 80px;
+      }
+    }
+  }
+  #contact {
+    span {
+      width: 120px;
+      height: 120px;
+      svg {
+        height: 80px;
+        width: 80px;
+      }
+    }
+  }
+}

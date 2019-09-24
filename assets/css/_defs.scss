@@ -1,0 +1,61 @@
+
+// colors
+
+//primary
+$white: #ffffff;
+$black: #000000;
+$black-2: #1b1b1b;
+$yellow-main: #fed200;
+$orange: #854321;
+//bg
+$ebony: #22313F;
+$green: #1c5e3a;
+
+//accent
+$malachite: #00E640;
+$yellow: #ffff00;
+$california: #F89406;
+
+// body font size
+$browser-context: 12;
+
+* {
+  font-family: 'Qanelas Soft';
+}
+
+.btn-custom {
+  border-radius: 0;
+  color: #fff;
+  background: rgba(30, 30, 30, 1);
+  padding: .375rem 3rem;
+  transition-duration: .2s;
+  &:hover {
+    background: rgba(35, 35, 35, 1);
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.5);
+
+  }
+}
+
+
+h1 {
+  font-family: 'Qanelas Soft';
+  color: white;
+  font-size: 5rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+}
+
+.btn-special {
+  border: 1px solid white;
+  border-radius: 0;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  color: $white;
+  &:hover {
+    background-color: white;
+    color: #151515;
+  }
+}

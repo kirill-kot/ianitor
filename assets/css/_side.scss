@@ -1,0 +1,133 @@
+
+.side {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 500;
+  #logo {
+    align-self: center;
+    //position: absolute;
+    //top: 10px;
+    //left: 20px;
+    width: 40px;
+    height: auto;
+    .st0{
+      fill:#ffffff;
+      stroke-width: 2px;
+    }
+  }
+  #logo_text {
+    top: 10px;
+    left: 10px;
+    width: auto;
+    height: 20px;
+    transform: rotate(-90deg);
+    display: block;
+    .st0{
+      fill:#ffffff;
+      stroke-width: 1px;
+    }
+  }
+  .toTop {
+    align-self: center;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 40px;
+    height: 20px;
+  #uparrow {
+    transition-duration: .5s;
+    .st0{
+      fill: #FFFFFF;
+      stroke-width: 2px;
+    }
+  }
+  }
+}
+
+@media (max-width: 1280px) {
+  .side {
+    width: 40px;
+    #logo {
+      align-self: center;
+      //position: absolute;
+      //top: 10px;
+      //left: 5px;
+      width: 30px;
+    }
+    #logo_text {
+      top: 5px;
+      left: 5px;
+      height: 20px;
+    }
+    .toTop {
+      top: 10px;
+      left: 5px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .container {
+    width: calc(100% - 80px);
+    margin: 0 40px;
+  }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1600px) {
+  .side {
+    width: 80px;
+    #logo {
+      width: 40px;
+    }
+    #logo_text {
+      height: 20px;
+    }
+    .toTop {
+      top: 10px;
+      //left: 10px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media all and (min-width: 1601px) and (max-width: 1920px) {
+  .side {
+    width: 80px;
+    #logo {
+      width: 40px;
+    }
+    #logo_text {
+      height: 20px;
+    }
+    .toTop {
+      top: 10px;
+      //left: 15px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media all and (min-width: 1921px) {
+  .side {
+    width: 90px;
+    #logo {
+      width: 50px;
+    }
+    #logo_text {
+      height: 25px;
+    }
+    .toTop {
+      top: 10px;
+      //left: 20px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

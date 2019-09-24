@@ -1,0 +1,125 @@
+.fancybox-caption-wrap {
+  bottom: 0;
+  background: transparent;
+  padding: 0 5rem;
+  .fancybox-caption{
+    font-family: 'Qanelas Soft';
+    font-size: 2rem;
+    font-weight: 200;
+  }
+}
+.fancybox-inner {
+  .heading {
+    padding-left: 5rem;
+  }
+  .fancybox-arrow {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    &:after {
+      width: 80px;
+      height: 80px;
+      top:0;
+      background-color: transparent;
+      background-size: 60px;
+    }
+  }
+  .fancybox-arrow--left{
+    left: auto;
+    right: 80px;
+  }
+}
+.fancybox-slide {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  .fancybox-image-wrap {
+    max-width: 80vw;
+    max-height: 60vh;
+    width: 80vw !important;
+    height: 60vh !important;
+    transform: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fancybox-image, .fancybox-spaceball {
+    height: 100%;
+    width: auto;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+.fancybox-button {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  background: transparent;
+  &:hover {
+    background: transparent !important;
+  }
+}
+.fancybox-stage {
+  z-index: 1000;
+}
+.fancybox-button--close{
+  position: absolute;
+  right: 5rem;
+  z-index: 25000;
+  &:before {
+    width: 80px;
+    height: 3px;
+    top: 50%;
+    opacity: 1;
+    color: $white;
+    left: 0;
+  }
+  &:after {
+    width: 80px;
+    height: 3px;
+    top: 50%;
+    opacity: 1;
+    color: $white;
+    left: 0;
+  }
+  &:hover {
+    &:before {
+      height: 4px;
+    }
+    &:after {
+      height: 4px;
+    }
+  }
+}
+
+.close {
+  @extend .fancybox-button;
+}
+
+@media all and (max-width: 768px) {
+  .fancybox-slide {
+    width: 60%;
+    height: 60%;
+    margin: 40% 20% 0;
+    .fancybox-image-wrap {
+      max-width: 60vw;
+      max-height: 40vh;
+      width: 60vw !important;
+      height: auto;
+    }
+  }
+  .fancybox-button, .close {
+    right: 1rem;
+  }
+  .fancybox-inner .heading {
+    width: 80%;
+    padding-top: 1rem;
+    padding-left: 1rem;
+  }
+  .fancybox-arrow {
+    top: 75%;
+  }
+}
